@@ -9,12 +9,12 @@ function App() {
   const [SpinLoader, setSpinLoader] = useState(false);
   const [SearchData, setSearchData] = useState(null);
   return (
-    <Router>
+    <Router basename="/base">
       <div className="App">
         <Navbar SearchData={SearchData} setSearchData={setSearchData} />
         {SpinLoader && <Loader />}
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/base">
             <News
               key="general"
               category="general"
